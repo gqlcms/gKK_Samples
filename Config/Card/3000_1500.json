@@ -1,0 +1,20 @@
+{
+    "customize": {
+        "KKgluon_coupling": "6", 
+        "ratio": "0p5", 
+        "KKRadion_mass": "1500", 
+        "KKphoton_coupling": "2.65", 
+        "gravity_coupling": "5", 
+        "KKW_coupling": "3", 
+        "KKGluon_mass": "3000"
+    }, 
+    "process": {
+        "output_dir": "Res1ToRes2GluToGluVV_M1-3000_R-1500", 
+        "Radion_Decay": "R > v v"
+    }, 
+    "output": {
+        "output_dir_relative_path": "cards/gKK/UL2016/V1/", 
+        "output_dir": "/eos/user/q/qiguo/gen/genproductions/bin/MadGraph5_aMCatNLO/cards/gKK/UL2016/V1/", 
+        "run_scripts": "/eos/user/q/qiguo/gen/genproductions/bin/MadGraph5_aMCatNLO/gKK_21_12_26.sh"
+    }
+}

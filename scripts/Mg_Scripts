@@ -1,0 +1,25 @@
+import model Radion_GKK_UFO
+define v=w+ w- z
+generate p p > GKK > R g, R > v v
+output Res1ToRes2GluToGluVV_M1-3000_R-1500 -nojpeg
+
+launch Res1ToRes2GluToGluVV_M1-3000_R-1500
+    set param_card MASS 9000021 2500
+    set param_card DECAY 9000021 Auto
+    #MR - Radion mass and width
+    set param_card MASS 9000025 250 
+    set param_card DECAY 9000025 Auto
+    #MKK - Other EW KK gauge bosons mass
+    set param_card KKINPUTS 6 3000 
+    #ggrav - KK gravity coupling
+    set param_card KKINPUTS 4 5 
+    #gAKK - coupling for KK photon
+    set param_card KKINPUTS 2 2.65
+    #gWKK - coupling for KK W
+    set param_card KKINPUTS 1 3 
+    #gGKK - coupling for KK gluon
+    #gGKK - coupling for KK gluon
+    set param_card KKINPUTS 3 6
+
+launch Res1ToRes2GluToGluVV_M1-3000_R-1500 -i
+    print_results --path=./cross_section_Res1ToRes2GluToGluVV_M1-3000_R-1500.txt --format=short

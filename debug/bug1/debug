@@ -1,0 +1,534 @@
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.6.5                 2018-02-03         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from ../input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+import /eos/home-q/qiguo/gKK/SignalSample/PrivateSample/V1/scripts/Mg_Scripts
+The import format was not given, so we guess it as command
+import model Radion_GKK_UFO
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g a ve vm vt ve~ vm~ vt~ gkk u c t d s b u~ c~ t~ d~ s~ b~ z w+ h r w- e- mu- ta- e+ mu+ ta+
+define v=w+ w- z
+Defined multiparticle v = w+ z w-
+generate p p > GKK > R g, R > v v
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: Trying coupling order WEIGHTED<=4: WEIGTHED IS 2*QED+QCD 
+INFO: Trying coupling order WEIGHTED<=5: WEIGTHED IS 2*QED+QCD 
+INFO: Trying coupling order WEIGHTED<=6: WEIGTHED IS 2*QED+QCD 
+INFO: Trying coupling order WEIGHTED<=7: WEIGTHED IS 2*QED+QCD 
+INFO: Trying coupling order WEIGHTED<=8: WEIGTHED IS 2*QED+QCD 
+INFO: Trying coupling order WEIGHTED<=9: WEIGTHED IS 2*QED+QCD 
+INFO: Trying coupling order WEIGHTED<=10: WEIGTHED IS 2*QED+QCD 
+INFO: Trying coupling order WEIGHTED<=11: WEIGTHED IS 2*QED+QCD 
+INFO: Trying process: g g > gkk > r g WEIGHTED<=12 @1  
+INFO: Trying process: u u~ > gkk > r g WEIGHTED<=12 @1  
+INFO: Process has 1 diagrams 
+INFO: Trying process: u c~ > gkk > r g WEIGHTED<=12 @1  
+INFO: Trying process: c u~ > gkk > r g WEIGHTED<=12 @1  
+INFO: Trying process: c c~ > gkk > r g WEIGHTED<=12 @1  
+INFO: Process has 1 diagrams 
+INFO: Trying process: d d~ > gkk > r g WEIGHTED<=12 @1  
+INFO: Process has 1 diagrams 
+INFO: Trying process: d s~ > gkk > r g WEIGHTED<=12 @1  
+INFO: Trying process: s d~ > gkk > r g WEIGHTED<=12 @1  
+INFO: Trying process: s s~ > gkk > r g WEIGHTED<=12 @1  
+INFO: Process has 1 diagrams 
+INFO: Process u~ u > r g added to mirror process u u~ > r g 
+INFO: Process c~ c > r g added to mirror process c c~ > r g 
+INFO: Process d~ d > r g added to mirror process d d~ > r g 
+INFO: Process s~ s > r g added to mirror process s s~ > r g 
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: Trying coupling order WEIGHTED<=2: WEIGTHED IS 2*QED+QCD 
+INFO: Trying process: r > w+ w- WEIGHTED<=2  
+INFO: Process has 1 diagrams 
+INFO: Trying process: r > z z WEIGHTED<=2  
+1 processes with 5 diagrams generated in 0.197 s
+Total: 1 processes with 5 diagrams
+output Res1ToRes2GluToGluVV_M1-3000_R-1500 -nojpeg
+INFO: initialize a new directory: Res1ToRes2GluToGluVV_M1-3000_R-1500 
+INFO: remove old information in Res1ToRes2GluToGluVV_M1-3000_R-1500 
+INFO: Organizing processes into subprocess groups 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: u u~ > gkk > r g WEIGHTED<=12 @1 
+INFO: Generating Helas calls for process: c c~ > gkk > r g WEIGHTED<=12 @1 
+INFO: Generating Helas calls for process: d d~ > gkk > r g WEIGHTED<=12 @1 
+INFO: Generating Helas calls for process: s s~ > gkk > r g WEIGHTED<=12 @1 
+INFO: Generating Helas calls for process: r > w+ w- WEIGHTED<=2 
+INFO: Combine u u~ > gkk > r g WEIGHTED<=12 @1 with decays r > w+ w- WEIGHTED<=2 
+INFO: Combine c c~ > gkk > r g WEIGHTED<=12 @1 with decays r > w+ w- WEIGHTED<=2 
+INFO: Combine d d~ > gkk > r g WEIGHTED<=12 @1 with decays r > w+ w- WEIGHTED<=2 
+INFO: Combine s s~ > gkk > r g WEIGHTED<=12 @1 with decays r > w+ w- WEIGHTED<=2 
+INFO: Processing color information for process: u u~ > gkk > r g @1
+  Decay: r > w+ w- WEIGHTED<=2 
+INFO: Reusing existing color information for process: c c~ > gkk > r g @1
+  Decay: r > w+ w- WEIGHTED<=2 
+INFO: Reusing existing color information for process: d d~ > gkk > r g @1
+  Decay: r > w+ w- WEIGHTED<=2 
+INFO: Reusing existing color information for process: s s~ > gkk > r g @1
+  Decay: r > w+ w- WEIGHTED<=2 
+INFO: Creating files in directory P1_uux_rg_r_wpwm 
+INFO: Generating Feynman diagrams for Process: u u~ > gkk > r g WEIGHTED<=12 @1
+  Decay: r > w+ w- WEIGHTED<=2 
+INFO: Finding symmetric diagrams for subprocess group uux_rg_r_wpwm 
+INFO: Creating files in directory P1_ccx_rg_r_wpwm 
+INFO: Generating Feynman diagrams for Process: c c~ > gkk > r g WEIGHTED<=12 @1
+  Decay: r > w+ w- WEIGHTED<=2 
+INFO: Finding symmetric diagrams for subprocess group ccx_rg_r_wpwm 
+INFO: Creating files in directory P1_ddx_rg_r_wpwm 
+INFO: Generating Feynman diagrams for Process: d d~ > gkk > r g WEIGHTED<=12 @1
+  Decay: r > w+ w- WEIGHTED<=2 
+INFO: Finding symmetric diagrams for subprocess group ddx_rg_r_wpwm 
+INFO: Creating files in directory P1_ssx_rg_r_wpwm 
+INFO: Generating Feynman diagrams for Process: s s~ > gkk > r g WEIGHTED<=12 @1
+  Decay: r > w+ w- WEIGHTED<=2 
+INFO: Finding symmetric diagrams for subprocess group ssx_rg_r_wpwm 
+Generated helas calls for 4 subprocesses (4 diagrams) in 0.043 s
+Wrote files for 32 helas calls in 2.353 s
+ALOHA: aloha creates VVS2 routines
+ALOHA: aloha creates FFV1 routines
+save configuration file to /eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/Cards/me5_configuration.txt
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+INFO: Generate web pages 
+tar: Cards: 在我们读入文件时文件发生了变化
+tar: SubProcesses/P1_ccx_rg_r_wpwm: 在我们读入文件时文件发生了变化
+tar: SubProcesses/P1_ddx_rg_r_wpwm: 在我们读入文件时文件发生了变化
+tar: SubProcesses/P1_ssx_rg_r_wpwm: 在我们读入文件时文件发生了变化
+tar: SubProcesses/P1_uux_rg_r_wpwm: 在我们读入文件时文件发生了变化
+tar: bin: 在我们读入文件时文件发生了变化
+Output to directory /eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500 done.
+Type "launch" to generate events from this process, or see
+/eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/README
+Run "open index.html" to see more information about this process.
+launch Res1ToRes2GluToGluVV_M1-3000_R-1500
+************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.6.5                 2018-02-03         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/Cards/me5_configuration.txt  
+INFO: load configuration from /eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/input/mg5_configuration.txt  
+INFO: load configuration from /eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/Cards/me5_configuration.txt  
+generate_events run_01
+set param_card MASS 9000021 2500
+[1mINFO: modify param_card information BLOCK mass with id (9000021,) set to 2500.0 [0m
+set param_card DECAY 9000021 Auto
+[1mINFO: modify param_card information BLOCK decay with id (9000021,) set to Auto [0m
+set param_card MASS 9000025 250
+[1mINFO: modify param_card information BLOCK mass with id (9000025,) set to 250.0 [0m
+set param_card DECAY 9000025 Auto
+[1mINFO: modify param_card information BLOCK decay with id (9000025,) set to Auto [0m
+set param_card KKINPUTS 6 3000
+[1mINFO: modify param_card information BLOCK kkinputs with id (6,) set to 3000.0 [0m
+set param_card KKINPUTS 4 5
+[1mINFO: modify param_card information BLOCK kkinputs with id (4,) set to 5.0 [0m
+set param_card KKINPUTS 2 2.65
+[1mINFO: modify param_card information BLOCK kkinputs with id (2,) set to 2.65 [0m
+set param_card KKINPUTS 1 3
+[1mINFO: modify param_card information BLOCK kkinputs with id (1,) set to 3.0 [0m
+set param_card KKINPUTS 3 6
+[1mINFO: modify param_card information BLOCK kkinputs with id (3,) set to 6.0 [0m
+Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param : [32mparam_card.dat[0m                                 |
+|  [31m2[0m. run   : [32mrun_card.dat[0m                                   |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, enter path]
+[1;34mfound line : launch Res1ToRes2GluToGluVV_M1-3000_R-1500 -i[0m
+[1;34mThis answer is not valid for current question. Keep it for next question and use here default: 0[0m
+INFO: Change particles name to pass to MG5 convention 
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.6.5                 2018-02-03         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from ../input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+set automatic_html_opening False --no_save
+compute_widths 9000025 9000021 --precision_channel=0.01 --body_decay=4.0025 --path=/eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/Cards/param_card.dat --output=/eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/Cards/param_card.dat
+[1;34mPlease note that the automatic computation of the width is
+    only valid in narrow-width approximation and at tree-level.[0m
+INFO: Get two body decay from FeynRules formula 
+Results written to /eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/Cards/param_card.dat
+INFO: get decay diagram for r 
+Vertexlist of this model has not been searched.Automatically run the model.find_vertexlist()
+Found 3 stable particles
+INFO: get decay diagram for gkk 
+No decay is found
+No need for N body-decay (N>2). Results are in /eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/Cards/param_card.dat
+INFO: Update the dependent parameter of the param_card.dat 
+Generating 10000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+Failed to open connection to "session" message bus: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+Running without a11y support!
+compile Source Directory
+Error: no DISPLAY environment variable specified
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO:     P1_uux_rg_r_wpwm  
+INFO:     P1_ccx_rg_r_wpwm  
+STOP 3
+rm: 无法删除"results.dat": 没有那个文件或目录
+ERROR DETECTED
+INFO:     P1_ddx_rg_r_wpwm  
+STOP 3
+rm: 无法删除"results.dat": 没有那个文件或目录
+ERROR DETECTED
+INFO:     P1_ssx_rg_r_wpwm  
+STOP 3
+rm: 无法删除"results.dat": 没有那个文件或目录
+ERROR DETECTED
+INFO:  Idle: 1,  Running: 0,  Completed: 3 [ current time: 11h46 ] 
+INFO:  Idle: 0,  Running: 1,  Completed: 3 [ current time: 11h46 ] 
+STOP 3
+rm: 无法删除"results.dat": 没有那个文件或目录
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 0,  Completed: 4 [  0.24s  ] 
+INFO: End survey 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweigthed events. 
+[1;31mError when reading /eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/SubProcesses/P1_uux_rg_r_wpwm/G1/results.dat[0m
+[1;31mCommand "generate_events run_01" interrupted with error:
+Exception : Reported error: End code 3.0 
+	 Full associated log: 
+	 Process in group number            1
+	 A PDF is used, so alpha_s(MZ) is going to be modified
+	 Old value of alpha_s from param_card:   0.11839999999999999     
+	  ****************************************
+	 
+	       NNPDFDriver version 1.0.3
+	   Grid: NNPDF23_lo_as_0130_qed_mem0.grid
+	  ****************************************
+	 New value of alpha_s from PDF nn23lo1:  0.13000000000000000     
+	 Define smin to   400.00000000000000     
+	 *****************************************************
+	 *               MadGraph/MadEvent                   *
+	 *        --------------------------------           *
+	 *          http://madgraph.hep.uiuc.edu             *
+	 *          http://madgraph.phys.ucl.ac.be           *
+	 *          http://madgraph.roma2.infn.it            *
+	 *        --------------------------------           *
+	 *                                                   *
+	 *          PARAMETER AND COUPLING VALUES            *
+	 *                                                   *
+	 *****************************************************
+	
+	  External Params
+	  ---------------------------------
+	  
+	 mdl_cabi =   0.22773599999999999     
+	 mdl_gWKK =    3.0000000000000000     
+	 mdl_gAKK =    2.6499999999999999     
+	 mdl_gGKK =    6.0000000000000000     
+	 mdl_ggrav =    5.0000000000000000     
+	 mdl_epsilon =   0.50000000000000000     
+	 mdl_MKK =    3000.0000000000000     
+	 aEWM1 =    127.90000000000001     
+	 mdl_Gf =    1.1663700000000000E-005
+	 aS =   0.11839999999999999     
+	 mdl_ymdo =    5.0400000000000002E-003
+	 mdl_ymup =    2.5500000000000002E-003
+	 mdl_yms =   0.10100000000000001     
+	 mdl_ymc =    1.2700000000000000     
+	 mdl_ymb =    4.7000000000000002     
+	 mdl_ymt =    172.00000000000000     
+	 mdl_yme =    5.1099999999999995E-004
+	 mdl_ymm =   0.10566000000000000     
+	 mdl_ymtau =    1.7769999999999999     
+	 mdl_MZ =    91.187600000000003     
+	 mdl_MGKK =    2500.0000000000000     
+	 mdl_Me =    5.1099999999999995E-004
+	 mdl_MMU =   0.10566000000000000     
+	 mdl_MTA =    1.7769999999999999     
+	 mdl_MU =    2.5500000000000002E-003
+	 mdl_MC =    1.2700000000000000     
+	 mdl_MT =    172.00000000000000     
+	 mdl_MD =    5.0400000000000002E-003
+	 mdl_MS =   0.10100000000000001     
+	 mdl_MB =    4.7000000000000002     
+	 mdl_MH =    125.00000000000000     
+	 mdl_MR =    250.00000000000000     
+	 mdl_WZ =    2.4952000000000001     
+	 mdl_WW =    2.0850000000000000     
+	 mdl_WGKK =    11.012350000000000     
+	 mdl_WT =    1.5083359999999999     
+	 mdl_WH =    4.0699999999999998E-003
+	 mdl_WR =    3.7319459999999999E-003
+	  Internal Params
+	  ---------------------------------
+	  
+	 mdl_gAKK__exp__2 =    7.0225000000000000     
+	 mdl_gWKK__exp__2 =    9.0000000000000000     
+	 mdl_gZKK =    6.4000632108130011     
+	 mdl_cos__cabi =   0.97418004031982097     
+	 mdl_CKM1x1 =  ( 0.97418004031982097     ,  0.0000000000000000     )
+	 mdl_sin__cabi =   0.22577256042856930     
+	 mdl_CKM1x2 =  ( 0.22577256042856930     ,  0.0000000000000000     )
+	 mdl_CKM1x3 =  (  0.0000000000000000     ,  0.0000000000000000     )
+	 mdl_CKM2x1 =  (-0.22577256042856930     ,  0.0000000000000000     )
+	 mdl_CKM2x2 =  ( 0.97418004031982097     ,  0.0000000000000000     )
+	 mdl_CKM2x3 =  (  0.0000000000000000     ,  0.0000000000000000     )
+	 mdl_CKM3x1 =  (  0.0000000000000000     ,  0.0000000000000000     )
+	 mdl_CKM3x2 =  (  0.0000000000000000     ,  0.0000000000000000     )
+	 mdl_CKM3x3 =  (  1.0000000000000000     ,  0.0000000000000000     )
+	 mdl_MZ__exp__2 =    8315.1783937600012     
+	 mdl_MZ__exp__4 =    69142191.720053151     
+	 mdl_sqrt__2 =    1.4142135623730951     
+	 mdl_gGKK__exp__2 =    36.000000000000000     
+	 mdl_MH__exp__2 =    15625.000000000000     
+	 mdl_complexi =  (  0.0000000000000000     ,  1.0000000000000000     )
+	 mdl_gZKK__exp__2 =    40.960809102402024     
+	 mdl_conjg__CKM1x1 =  ( 0.97418004031982097     , -0.0000000000000000     )
+	 mdl_conjg__CKM1x2 =  ( 0.22577256042856930     , -0.0000000000000000     )
+	 mdl_conjg__CKM1x3 =  (  0.0000000000000000     , -0.0000000000000000     )
+	 mdl_conjg__CKM2x1 =  (-0.22577256042856930     , -0.0000000000000000     )
+	 mdl_conjg__CKM2x2 =  ( 0.97418004031982097     , -0.0000000000000000     )
+	 mdl_conjg__CKM2x3 =  (  0.0000000000000000     , -0.0000000000000000     )
+	 mdl_conjg__CKM3x1 =  (  0.0000000000000000     , -0.0000000000000000     )
+	 mdl_conjg__CKM3x2 =  (  0.0000000000000000     , -0.0000000000000000     )
+	 mdl_conjg__CKM3x3 =  (  1.0000000000000000     , -0.0000000000000000     )
+	 mdl_aEW =    7.8186082877247844E-003
+	 mdl_MW =    79.824359746197842     
+	 mdl_sqrt__aEW =    8.8422894590285753E-002
+	 mdl_ee =   0.31345100004952897     
+	 mdl_MW__exp__2 =    6371.9284088904105     
+	 mdl_sw2 =   0.23369913342182447     
+	 mdl_cw =   0.87538612427783857     
+	 mdl_sqrt__sw2 =   0.48342438232036300     
+	 mdl_sw =   0.48342438232036300     
+	 mdl_g1 =   0.35807170271074895     
+	 mdl_gw =   0.64839716719502682     
+	 mdl_vev =    246.22056907348590     
+	 mdl_gz =   0.74069847489292873     
+	 mdl_vev__exp__2 =    60624.568634871241     
+	 mdl_lam =   0.12886689630821144     
+	 mdl_yb =    2.6995322804122722E-002
+	 mdl_yc =    7.2944808428161397E-003
+	 mdl_ydo =    2.8948175943144366E-005
+	 mdl_ye =    2.9350233942354699E-006
+	 mdl_ym =    6.0687783137949077E-004
+	 mdl_ys =    5.8011225600348830E-004
+	 mdl_yt =   0.98791394091683138     
+	 mdl_ytau =    1.0206529494239589E-002
+	 mdl_yup =    1.4646398542662327E-005
+	 mdl_muH =    88.388347648318444     
+	 mdl_ee__exp__2 =    9.8251529432049817E-002
+	 mdl_sw__exp__2 =   0.23369913342182450     
+	 mdl_cw__exp__2 =   0.76630086657817542     
+	  Internal Params evaluated point by point
+	  ----------------------------------------
+	  
+	 mdl_sqrt__aS =   0.34409301068170506     
+	 mdl_G__exp__2 =    1.4878582807401259     
+	 mdl_gKKf =   0.24797638012335432     
+	 mdl_gRFKK =    2.0329632728415366E-004
+	 mdl_gRGG =    8.2658793374451443E-005
+	  Couplings of Radion_GKK_UFO
+	  ---------------------------------
+	  
+	        GC_15 =   0.00000E+00   0.24798E+00
+	        GC_16 =   0.00000E+00   0.40659E-03
+	        GC_30 =  -0.00000E+00  -0.77855E-04
+	
+	 Collider parameters:
+	 --------------------
+	
+	 Running at P P   machine @    13000.000000000000       GeV
+	 PDF set = nn23lo1
+	 alpha_s(Mz)= 0.1300 running at 2 loops.
+	 alpha_s(Mz)= 0.1300 running at 2 loops.
+	 Renormalization scale set on event-by-event basis
+	 Factorization   scale set on event-by-event basis
+	
+	
+	 getting user params
+	Enter number of events and max and min iterations: 
+	 Number of events and iterations         1000           5           3
+	Enter desired fractional accuracy: 
+	 Desired fractional accuracy:   0.10000000000000001     
+	Enter 0 for fixed, 2 for adjustable grid: 
+	Suppress amplitude (0 no, 1 yes)? 
+	 Using suppressed amplitude.
+	Exact helicity sum (0 yes, n = number/event)? 
+	 Explicitly summing over helicities
+	Enter Configuration Number: 
+	Running Configuration Number:    1
+	 Not subdividing B.W.
+	 Attempting mappinvarients           1           5
+	 Completed mapping           5
+	 about to integrate            7        1000           5           3           7           1
+	 Using non-zero grid deformation.
+	  7 dimensions   1000 events  7 invarients  5 iterations  1 config(s),  (0.99)
+	 Using h-tuple random number sequence.
+	 Error opening grid
+	 Using Uniform Grid!          20
+	 Using uniform alpha   1.0000000000000000     
+	 Grid defined OK
+	 Set CM energy to      13000.00
+	 Mapping Graph           1  to config           1
+	 Setting BW          -1           1   250.00000000000000     
+	 Setting PDF BW           6           2   2500.0000000000000     
+	 Transforming s_hat BW    3.6982248520710068E-002   1.6290458579881658E-004
+	   1   1   2   3   4   5   6   7
+	 Masses: 0.255E-02 0.255E-02 0.798E+02 0.798E+02 0.000E+00
+	Using random seed offsets     1 :      1
+	  with seed                   24
+	 Ranmar initialization seeds       31059        9398
+	 
+	 ********************************************
+	 * You are using the DiscreteSampler module *
+	 *      part of the MG5_aMC framework       *
+	 *         Author: Valentin Hirschi         *
+	 ********************************************
+	 
+	  Particle       3       4       5
+	      Et >     0.0     0.0    20.0
+	       E >     0.0     0.0     0.0
+	     Eta <    -1.0    -1.0     5.0
+	   xqcut:      0.0     0.0     0.0
+	d R # 3  >    -0.0     0.0     0.0
+	d R # 4  >    -0.0    -0.0     0.0
+	s min # 3>     0.0     0.0     0.0
+	s min # 4>     0.0     0.0     0.0
+	xqcutij # 3>     0.0     0.0     0.0
+	xqcutij # 4>     0.0     0.0     0.0
+	 No cut BW           -1           1
+	 No cut BW           -2           2
+	     9000021 >     9000025          21 color           8 >           1           8
+	 failed for ipartupdate. Please retry without MLM/default dynamical scale
+	STOP 3
+	
+	ls status:
+	input_app.txt
+	run1_app.log
+	
+Please report this bug on https://bugs.launchpad.net/mg5amcnlo
+More information is found in '/eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/run_01_tag_1_debug.log'.
+Please attach this file to your report.[0m
+INFO:  
+INFO:  
+[1;34mcommand not executed:     print_results --path=./cross_section_Res1ToRes2GluToGluVV_M1-3000_R-1500.txt --format=short[0m
+quit
+INFO:  
+launch Res1ToRes2GluToGluVV_M1-3000_R-1500 -i
+************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.6.5                 2018-02-03         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/Cards/me5_configuration.txt  
+INFO: load configuration from /eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/input/mg5_configuration.txt  
+INFO: load configuration from /eos/home-q/qiguo/gKK/SignalSample/Mg_Local/MG5_aMC_v2_6_5/bin/Res1ToRes2GluToGluVV_M1-3000_R-1500/Cards/me5_configuration.txt  
+quit
+INFO:  
+quit
